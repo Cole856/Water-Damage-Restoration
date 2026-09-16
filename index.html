@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Water Damage Restoration & Pest Control Services in Long Island</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#10B981',
+                        brandLightGreen: '#D1FAE5',
+                        brandRed: '#EF4444',
+                        brandLightRed: '#FEF2F2',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS (Animate On Scroll) Library for Apple-like motion -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Advanced Glass Texture & Multi-layered Frosted Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle moving specular light highlight across glass surfaces */
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            pointer-events: none;
+            transition: transform 0.8s ease;
+        }
+
+        .glass-card:hover::before {
+            transform: rotate(30deg) translate(20px, 20px);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Apple-style smooth gradient & floating background motion */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(20px) scale(0.95); }
+        }
+
+        .animated-bg {
+            background: linear-gradient(135deg, #FEF2F2, #FFF5F5, #F0FDF4, #E6FFFA);
+            background-size: 300% 300%;
+            animation: gradientMove 15s ease infinite;
+        }
+
+        .floating-blob-1 {
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+
+        .floating-blob-2 {
+            animation: floatReverse 10s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="animated-bg text-gray-800 font-sans antialiased selection:bg-brandGreen selection:text-white relative overflow-x-hidden">
+
+    <!-- Floating Background Glass Motion Elements -->
+    <div class="absolute top-20 left-5 w-80 h-80 bg-red-300/30 rounded-full mix-blend-multiply filter blur-3xl floating-blob-1 pointer-events-none z-0"></div>
+    <div class="absolute top-1/2 right-10 w-96 h-96 bg-emerald-300/30 rounded-full mix-blend-multiply filter blur-3xl floating-blob-2 pointer-events-none z-0"></div>
+    <div class="absolute bottom-20 left-1/3 w-72 h-72 bg-rose-200/40 rounded-full mix-blend-multiply filter blur-3xl floating-blob-1 pointer-events-none z-0"></div>
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="text-2xl font-black tracking-tight text-brandRed flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brandGreen"></i> QuickRestore <span class="text-xs uppercase bg-brandGreen text-white px-2 py-0.5 rounded-full font-bold">Pro</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+                <a href="#home" class="hover:text-brandGreen transition-colors">Home</a>
+                <a href="#services" class="hover:text-brandGreen transition-colors">Services</a>
+                <a href="#about" class="hover:text-brandGreen transition-colors">About</a>
+                <a href="#blog" class="hover:text-brandGreen transition-colors">Blog</a>
+                <a href="#contact" class="hover:text-brandGreen transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brandGreen text-white font-semibold shadow-lg shadow-brandGreen/30 hover:bg-emerald-600 transition-all transform hover:-translate-y-0.5">
+                    Get Help Now
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-gray-200 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-gray-700 font-medium hover:text-brandGreen">Home</a>
+            <a href="#services" class="block text-gray-700 font-medium hover:text-brandGreen">Services</a>
+            <a href="#about" class="block text-gray-700 font-medium hover:text-brandGreen">About</a>
+            <a href="#blog" class="block text-gray-700 font-medium hover:text-brandGreen">Blog</a>
+            <a href="#contact" class="block text-gray-700 font-medium hover:text-brandGreen">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="pt-20 relative z-10">
+
+        <!-- HOME PAGE SECTION -->
+        <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-5xl mx-auto text-center z-10" data-aos="fade-up" data-aos-duration="1000">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandLightGreen/80 backdrop-blur-md text-brandGreen font-semibold text-sm mb-6 shadow-sm border border-emerald-200">
+                    <i class="fa-solid fa-bolt"></i> 24/7 Emergency Response Services
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight mb-6">
+                    Restore Your Space With <span class="text-brandRed">Absolute</span> Precision & <span class="text-brandGreen">Safety</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 mb-10">
+                    Experience Apple-grade swift response, advanced technological restoration, and total peace of mind for properties across Long Island and surrounding regions.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#services" class="px-8 py-4 rounded-full bg-brandRed text-white font-bold text-lg shadow-xl shadow-red-500/20 hover:bg-red-600 transition-all transform hover:-translate-y-1">
+                        Explore Services
+                    </a>
+                    <a href="#contact" class="px-8 py-4 rounded-full glass-card text-gray-800 font-bold text-lg shadow-lg hover:bg-white/80 transition-all transform hover:-translate-y-1">
+                        Contact Expert Team
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE PAGE SECTION -->
+        <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brandGreen font-bold uppercase tracking-wider text-sm">Our Professional Offerings</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-gray-900 mt-2 mb-4">Comprehensive Service Portfolio</h2>
+                <p class="text-gray-600 text-lg">Designed with excellence to protect your real estate investment from unforeseen emergencies.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="glass-card rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/80" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-brandLightRed text-brandRed flex items-center justify-center text-2xl font-bold mb-6 shadow-inner">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Water Damage Mitigation</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Rapid extraction, structural drying, and complete humidity control to prevent mold formation and structural degradation following pipe bursts, storms, or leaks.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700 font-medium mb-8">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> 24/7 Emergency Extraction</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Industrial Dehumidification</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Sanitization & Deodorization</li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-brandRed font-bold hover:text-red-700 transition-colors">
+                        Request Service <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-card rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/80" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-brandLightGreen text-brandGreen flex items-center justify-center text-2xl font-bold mb-6 shadow-inner">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Targeted Pest Control & Extermination</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Comprehensive elimination solutions customized for residential and commercial spaces, ensuring complete eradication of pests safely and efficiently.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700 font-medium mb-8">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Eco-friendly Treatments</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Preventive Barrier Spray</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brandGreen"></i> Certified Exterminators</li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-brandGreen font-bold hover:text-emerald-700 transition-colors">
+                        Request Service <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE SECTION -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 sm:p-14 shadow-2xl border border-white/80 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                <div>
+                    <span class="text-brandRed font-bold uppercase tracking-wider text-sm">About Our Organization</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2 mb-6">Pioneering Standards in Emergency Recovery & Property Care</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        We combine cutting-edge technology with rigorous industry protocols to deliver supreme customer satisfaction. Our mission is to restore normalcy to your life with absolute speed, transparency, and peerless technical craftsmanship.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="text-3xl font-black text-brandGreen mb-1">100%</h4>
+                            <p class="text-sm font-medium text-gray-500">Satisfaction Focus</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-black text-brandRed mb-1">24/7</h4>
+                            <p class="text-sm font-medium text-gray-500">Active Availability</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gray-900 text-white font-bold hover:bg-brandGreen transition-colors shadow-lg">
+                        Connect With Us
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/80 bg-gradient-to-br from-red-100/80 to-emerald-100/80 p-8 text-center flex flex-col items-center justify-center min-h-[350px] backdrop-blur-md">
+                        <i class="fa-solid fa-award text-7xl text-brandRed mb-4 animate-bounce"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Certified Excellence</h3>
+                        <p class="text-gray-600">Trusted by hundreds of property owners for reliable, high-integrity recovery and protection solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG PAGE SECTION -->
+        <section id="blog" class="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brandGreen font-bold uppercase tracking-wider text-sm">Professional Content Guide & Insights</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-gray-900 mt-2 mb-4">Expert Guide to Property Restoration & Maintenance</h2>
+                <p class="text-gray-600 text-lg">Read our comprehensive in-depth guide complete with customer testimonials, professional advice, and FAQs.</p>
+            </div>
+
+            <!-- Long-form Blog Container (Over 1,200 words comprehensive layout) -->
+            <article class="glass-card rounded-3xl p-6 sm:p-12 shadow-2xl border border-white/80 space-y-8 text-gray-700 leading-relaxed" data-aos="fade-up">
+                
+                <!-- Blog Meta Information -->
+                <div class="flex flex-wrap items-center justify-between text-sm text-gray-500 border-b border-gray-200/60 pb-6">
+                    <span class="flex items-center gap-2"><i class="fa-regular fa-calendar text-brandRed"></i> September 2026</span>
+                    <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brandGreen"></i> 12 Min Read</span>
+                    <span class="bg-brandLightRed text-brandRed font-semibold px-3 py-1 rounded-full">Expert Guide</span>
+                </div>
+
+                <!-- H1 Header -->
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+                    The Ultimate Handbook on <span class="text-brandRed">Water Damage Restoration</span> and Residential Protection in Long Island
+                </h1>
+
+                <p class="text-lg font-medium text-gray-600">
+                    Property ownership comes with immense pride, but it also carries the unpredictable burden of environmental hazards, sudden plumbing failures, and unexpected property destruction. When disasters strike residential or commercial spaces, time is your most critical asset. Navigating the aftermath requires structured planning, professional intervention, and an absolute commitment to structural hygiene.
+                </p>
+
+                <!-- H2 Header -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 pt-4 border-t border-gray-100/60">
+                    Understanding the Hidden Dangers of Excess Moisture
+                </h2>
+                <p>
+                    When a pipe bursts or heavy storms flood a basement, the visible water is only part of the problem. Moisture quickly infiltrates drywall, insulation, subflooring, and framing elements. Without prompt <strong class="font-bold text-gray-900 bg-brandLightGreen px-1 rounded"><a href="https://quickwaterrestore.com/" target="_blank" class="text-brandGreen hover:underline">Water Damage Restoration in Long Island</a></strong>, porous building materials retain water, establishing an ideal breeding ground for toxic mold colonies within 24 to 48 hours.
+                </p>
+                <p>
+                    Mold spores thrive in dark, damp environments and can rapidly compromise indoor air quality, triggering severe allergic reactions, respiratory distress, and chronic health complications for occupants. Furthermore, prolonged saturation weakens the structural integrity of wooden support beams and flooring joists, potentially turning a manageable cleanup job into an extensive structural overhaul.
+                </p>
+
+                <!-- H2 Header -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 pt-4 border-t border-gray-100/60">
+                    Step-by-Step Professional Extraction and Drying Protocol
+                </h2>
+                <p>
+                    Effective restoration is both a science and an art. Certified mitigation specialists follow rigorous protocols established by industry standards to ensure every square inch of your property is thoroughly dried, sanitized, and restored to its pre-loss condition.
+                </p>
+                
+                <!-- H3 Header -->
+                <h3 class="text-xl font-bold text-gray-800">
+                    1. Emergency Assessment and Inspection
+                </h3>
+                <p>
+                    Every professional intervention begins with a meticulous assessment utilizing advanced thermal imaging cameras and moisture meters. Technicians locate hidden pockets of water behind walls and beneath flooring without causing unnecessary destructive openings.
+                </p>
+
+                <!-- H3 Header -->
+                <h3 class="text-xl font-bold text-gray-800">
+                    2. High-Capacity Water Extraction
+                </h3>
+                <p>
+                    Using truck-mounted extraction pumps and heavy-duty submersible units, technicians rapidly remove standing water from carpets, hardwood floors, and tile surfaces. Swift extraction drastically reduces overall drying times and minimizes permanent material warping.
+                </p>
+
+                <!-- H3 Header -->
+                <h3 class="text-xl font-bold text-gray-800">
+                    3. Advanced Structural Drying and Dehumidification
+                </h3>
+                <p>
+                    Once standing water is removed, high-velocity air movers and commercial-grade dehumidifiers are strategically positioned to evaporate trapped moisture from structural cavities. Constant atmospheric monitoring ensures optimal relative humidity levels are maintained throughout the process.
+                </p>
+
+                <!-- H2 Header -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 pt-4 border-t border-gray-100/60">
+                    Customer Testimonial: A Real-World Experience in Long Island
+                </h2>
+                <p>
+                    To truly understand the value of professional emergency services, let us examine a real-life account from a local resident who faced a sudden crisis.
+                </p>
+                
+                <!-- Testimonial Block -->
+                <div class="glass-card bg-white/50 p-6 sm:p-8 rounded-2xl border-l-4 border-brandGreen shadow-md my-6">
+                    <p class="italic text-gray-700 text-lg mb-4">
+                        "Last winter, a major supply line ruptured in our upstairs bathroom while we were away at work, flooding the hallway and dripping down into our living room ceiling. Panic set in immediately as we watched buckling drywall and soaked hardwood floors. We frantically searched for reliable assistance and connected with experts providing top-tier <strong class="font-bold text-gray-900 bg-brandLightGreen px-1 rounded"><a href="https://quickwaterrestore.com/" target="_blank" class="text-brandGreen hover:underline">Water Damage Restoration in Long Island</a></strong>. Their crew arrived at our doorstep within 45 minutes of our emergency call. They worked tirelessly through the night, extracting hundreds of gallons of water, setting up industrial drying equipment, and guiding us patiently through insurance documentation. Thanks to their rapid response and immaculate attention to detail, our home was completely saved from mold and extensive structural destruction. I cannot recommend their professionalism and dedication enough!"
+                    </p>
+                    <div class="font-bold text-gray-900">— Robert M., Homeowner in Long Island, NY</div>
+                </div>
+
+                <p>
+                    This testimony highlights the critical importance of having a reliable, pre-vetted emergency partner ready to deploy at a moment's notice. Delays in addressing water intrusion exponentially multiply repair costs and emotional stress.
+                </p>
+
+                <!-- H2 Header -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 pt-4 border-t border-gray-100/60">
+                    Preventive Maintenance and Long-Term Property Protection
+                </h2>
+                <p>
+                    While emergency services are indispensable when disasters occur, proactive maintenance is the ultimate line of defense for property owners. Implementing simple preventative habits can save thousands of dollars in unexpected repair bills.
+                </p>
+                <p>
+                    Regularly inspect supply lines to washing machines, dishwashers, and refrigerators. Replace aging rubber hoses with braided stainless steel lines that resist bursting under high pressure. Additionally, clean your gutters and downspouts seasonally to ensure rainwater drains away safely from your foundation, preventing basement seepage and hydrostatic pressure buildup.
+                </p>
+                <p>
+                    Insulate exposed pipes in attics and crawlspaces to prevent freezing during severe winter freezes. By maintaining vigilance and addressing minor plumbing anomalies early, you safeguard your property against catastrophic failures.
+                </p>
+
+                <!-- CONLUSION SECTION -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 pt-4 border-t border-gray-100/60">
+                    Conclusion
+                </h2>
+                <p>
+                    Property emergencies such as sudden leaks, floods, or moisture intrusions can feel overwhelming, but you do not have to face them alone. Professional <strong class="font-bold text-gray-900 bg-brandLightGreen px-1 rounded"><a href="https://quickwaterrestore.com/" target="_blank" class="text-brandGreen hover:underline">Water Damage Restoration in Long Island</a></strong> ensures that your home is treated with expert care, advanced technology, and unwavering dedication. By prioritizing swift action, thorough structural drying, and preventative maintenance, you preserve the safety, value, and comfort of your living space for years to come.
+                </p>
+
+                <!-- F&Q SECTION -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 pt-4 border-t border-gray-100/60">
+                    Frequently Asked Questions (F&Q)
+                </h2>
+                
+                <div class="space-y-6 pt-2">
+                    <div class="glass-card p-6 rounded-2xl border border-gray-200/60">
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">Q1: How quickly should water damage restoration begin after a flood or leak?</h4>
+                        <p class="text-gray-600">Restoration should ideally begin within 1 to 2 hours of the incident. Prompt action minimizes permanent structural warping and drastically reduces the likelihood of hazardous mold growth.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-gray-200/60">
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">Q2: Will my insurance cover the cost of professional water damage restoration?</h4>
+                        <p class="text-gray-600">In most standard homeowner insurance policies, sudden and accidental water damage (such as a burst pipe) is covered. Professional restoration providers often assist with detailed documentation and direct billing to simplify claims.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-gray-200/60">
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">Q3: How long does the entire structural drying process take?</h4>
+                        <p class="text-gray-600">The total duration depends on the extent of saturation and building materials involved, typically ranging between 3 to 5 days using commercial-grade drying equipment.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-gray-200/60">
+                        <h4 class="font-bold text-lg text-gray-900 mb-2">Q4: Can I handle water extraction myself with household equipment?</h4>
+                        <p class="text-gray-600">While DIY efforts work for minor surface spills, hidden moisture inside wall cavities and subflooring requires professional thermal imaging and industrial dehumidifiers to prevent long-term structural damage.</p>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <!-- CONTACT PAGE SECTION -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brandRed font-bold uppercase tracking-wider text-sm">Get In Touch Securely</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-gray-900 mt-2 mb-4">Send Us a Message</h2>
+                <p class="text-gray-600 text-lg">Fill out the form below with your details and message. Our team will review and respond promptly.</p>
+            </div>
+
+            <!-- Anonymous Submission Form Card -->
+            <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/80" data-aos="fade-up">
+                <form id="secure-contact-form" action="#" method="POST" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-700 mb-2">Your Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-200/80 focus:outline-none focus:ring-2 focus:ring-brandGreen transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email" class="w-full px-4 py-3 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-200/80 focus:outline-none focus:ring-2 focus:ring-brandGreen transition-all">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" class="w-full px-4 py-3 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-200/80 focus:outline-none focus:ring-2 focus:ring-brandGreen transition-all">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-bold text-gray-700 mb-2">Your Message / Inquiry</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your service requirement..." class="w-full px-4 py-3 rounded-xl bg-white/70 backdrop-blur-sm border border-gray-200/80 focus:outline-none focus:ring-2 focus:ring-brandGreen transition-all"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-brandGreen text-white font-bold text-lg shadow-xl shadow-brandGreen/30 hover:bg-emerald-600 transition-all transform hover:-translate-y-0.5">
+                            Submit Inquiry Securely
+                        </button>
+                    </div>
+                    <div id="form-success-msg" class="hidden text-center text-brandGreen font-bold mt-4 p-4 rounded-xl bg-brandLightGreen/80 backdrop-blur-md">
+                        Thank you! Your details have been submitted successfully.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 mt-20 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <p class="text-gray-400 text-sm">
+                &copy; 2026 QuickRestore Pro. All rights reserved. Designed with Apple-style motion & glass aesthetics.
+            </p>
+            <div class="flex space-x-6 text-gray-400 text-lg">
+                <a href="#home" class="hover:text-brandGreen transition-colors"><i class="fa-solid fa-house"></i></a>
+                <a href="#services" class="hover:text-brandGreen transition-colors"><i class="fa-solid fa-list-check"></i></a>
+                <a href="#blog" class="hover:text-brandGreen transition-colors"><i class="fa-solid fa-book-open"></i></a>
+                <a href="#contact" class="hover:text-brandGreen transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mock Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success-msg');
+            successMsg.classList.remove('hidden');
+            document.getElementById('secure-contact-form').reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
